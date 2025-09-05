@@ -19,7 +19,7 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '8'
           distribution: 'temurin'
       - name: Cache Gradle packages
         uses: actions/cache@v4
@@ -40,7 +40,7 @@ jobs:
         with:
           test-name: Tests
           setup-command: ''
-          command: gradle test
+          command: ./gradlew test
           timeout: 10
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
