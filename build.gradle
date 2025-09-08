@@ -6,12 +6,16 @@ plugins {
 group 'org.athenian'
 version '1.0-SNAPSHOT'
 
-mainClassName = 'IntLinkedList'
+application {
+    mainClass = 'IntLinkedList'
+}
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+java {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
 
-run{
+run {
     standardInput = System.in
 }
 
